@@ -1,0 +1,25 @@
+#hand {
+  animation: handanima 3s ease-in-out infinite alternate;
+}
+
+@keyframes handanima {
+  from {
+    transform: skew(0deg);
+  }
+  to {
+    transform: skew(1.7deg);
+  }
+}
+
+#head {
+  animation: headanima 5s ease-in-out infinite alternate;
+}
+
+@keyframes headanima {
+  from {
+    transform: skewX(-2deg);
+  }
+  to {
+    transform: skewX(0deg);
+  }
+}

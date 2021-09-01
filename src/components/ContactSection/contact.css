@@ -1,0 +1,51 @@
+#letter {
+  animation: letteranima 2s ease-in infinite alternate;
+}
+
+@keyframes letteranima {
+  from {
+    transform: skewY(0deg) scale(1);
+  }
+  to {
+    transform: skewY(2deg) scale(1);
+  }
+}
+
+#mail {
+  animation: mailanima 2s ease-in infinite alternate;
+}
+
+@keyframes mailanima {
+  from {
+    transform: skewY(0deg);
+  }
+  to {
+    transform: skewY(1.5deg);
+  }
+}
+
+#floating-box {
+  animation: float 4s ease-in infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#flower {
+  animation: floweranima 4s ease-in infinite alternate;
+}
+
+@keyframes floweranima {
+  from {
+    transform: skewX(0deg) skewY(0deg);
+  }
+  to {
+    transform: skewX(2deg) skewY(5deg);
+  }
+}

@@ -88,7 +88,11 @@ export const NavLinks = styled(LinkS)`
   padding: 0 2vw;
 
   &:hover {
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid #de253e;
+  }
+
+  &.active {
     border-bottom: 3px solid #de253e;
   }
 `;
@@ -139,6 +143,6 @@ export const Logo = styled.img`
 export const Contact = styled.img`
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 70px;
   width: 100px;
 `;

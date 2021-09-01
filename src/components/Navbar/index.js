@@ -8,7 +8,6 @@ import {
   NavMenu,
   NavItems,
   NavLinks,
-  NavBtn,
   Logo,
   Contact,
 } from "./NavbarElements";
@@ -45,22 +44,40 @@ const Navbar = ({ toggle }) => {
           <NavMenu>
             <NavItems>
               <NavLinks
-                to="Page1"
+                to="aboutme"
                 smooth={true}
-                duration={500}
+                duration={600}
                 spy={true}
                 exact="true"
                 offset={-80}
+                activeClass="active"
+              >
+                About Me
+              </NavLinks>
+            </NavItems>
+            <NavItems>
+              <NavLinks
+                to="mywork"
+                smooth={true}
+                duration={600}
+                spy={true}
+                exact="true"
+                offset={-80}
+                activeClass="active"
               >
                 My Work
               </NavLinks>
             </NavItems>
             <NavItems>
-              <NavLinks to="Page2">About Me</NavLinks>
-            </NavItems>
-            <NavItems to="/" onClick={toggleHome}>
-              <NavLinks>
-                <Contact src={sayhello} alt="" />
+              <NavLinks
+                to="contact"
+                smooth={true}
+                duration={600}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Contact Me
               </NavLinks>
             </NavItems>
           </NavMenu>
