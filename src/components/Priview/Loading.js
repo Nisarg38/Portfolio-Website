@@ -2,15 +2,6 @@ import React from "react";
 import "./Loading.css";
 import styled from "styled-components";
 
-const LoadBody = styled.div`
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-`;
-
 const LoadH1 = styled.h1`
   color: white;
   font-size: 40px;

@@ -9,11 +9,9 @@ import {
   NavItems,
   NavLinks,
   Logo,
-  Contact,
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 import logo from "./Logo.svg";
-import sayhello from "./sayhello.svg";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setscrollNav] = useState(false);

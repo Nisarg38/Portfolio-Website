@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ValidationError, useForm } from "@formspree/react";
-import contact from "./contact.svg";
+import { useForm } from "@formspree/react";
 import "./contact.css";
 
 const Container = styled.div`
@@ -93,21 +92,6 @@ const FormBox = styled.div`
   }
 `;
 
-const SubmitButton = styled.button`
-  color: white;
-  margin-top: 20px;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden;
-  width: 20vw;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background-color: #9e1c2d;
-  }
-`;
-
 const Message = styled.div`
   display: flex;
   justify-content: center;
@@ -123,16 +107,6 @@ const ContactSvg = styled.div`
   margin-left: 14vw;
   height: 35vh;
   width: 40vw;
-`;
-
-const ResumeSvg = styled.div`
-  display: flex;
-  align-items: center;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: 200px;
-  height: 20vh;
-  width: 10vw;
 `;
 
 function Contact() {
@@ -849,6 +823,7 @@ function Contact() {
                 accept-charset="utf-8"
                 action="https://formspree.io/f/xayaaqyp"
                 method="post"
+                onSubmit={handleSubmit}
               >
                 <fieldset
                   id="fs-frm-inputs"
@@ -888,14 +863,13 @@ function Contact() {
                     name="_replyto"
                     id="email-address"
                     placeholder="Email@id.com"
-                    value=""
-                    required=""
                     style={{
                       borderTopStyle: "hidden",
                       borderRightStyle: "hidden",
                       borderLeftStyle: "hidden",
                       borderBottomStyle: "hidden",
                       borderBottom: "2px solid #de253e",
+                      color: "black",
                     }}
                   />
                   <br />
