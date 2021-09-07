@@ -1,5 +1,5 @@
 #hand {
-  animation: handanima 3s ease-in-out infinite alternate;
+  animation: handanima 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes handanima {
@@ -7,7 +7,7 @@
     transform: skew(0deg);
   }
   to {
-    transform: skew(1.7deg);
+    transform: skew(2deg);
   }
 }
 
