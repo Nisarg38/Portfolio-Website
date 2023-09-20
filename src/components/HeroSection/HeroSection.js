@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import "./hero.css";
@@ -67,6 +67,13 @@ const ContentSvg = styled(motion.div)`
 `;
 
 function HeroSection() {
+  const [animationComplete, setAnimationComplete] = useState(false);
+  const [showStrikethrough, setShowStrikethrough] = useState(false);
+  const [showDataAnalyst, setShowDataAnalyst] = useState(false);
+  const [showDataEngineer, setShowDataEngineer] = useState(false);
+  const [showMLEngineer, setShowMLEngineer] = useState(false);
+  const [showSomethingData, setShowSomethingData] = useState(false);
+
   const fadeLeft = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
@@ -76,6 +83,17 @@ function HeroSection() {
     hidden: { opacity: 0, x: 100 },
     visible: { opacity: 1, x: 0 },
   };
+
+  useEffect(() => {
+    if (animationComplete) {
+      setTimeout(() => {
+        setShowStrikethrough(true);
+        setTimeout(() => {
+          setShowDataAnalyst(true);
+        }, 1000); // After the strikethrough effect
+      }, 2000); // 2 seconds wait
+    }
+  }, [animationComplete]);
 
   return (
     <Container id="home">
@@ -87,6 +105,7 @@ function HeroSection() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 2 }}
+            onAnimationComplete={() => setAnimationComplete(true)}
           >
             Hi 👋 ,
           </ContentH1>
@@ -99,7 +118,10 @@ function HeroSection() {
             I am Nisarg.
           </ContentH1>
           <ContentH1
-            style={{ color: "#D72323" }}
+            style={{
+              color: "#D72323",
+            }}
+            className={showStrikethrough ? "strikethrough" : ""}
             variants={fadeRight}
             initial="hidden"
             animate="visible"
@@ -107,6 +129,54 @@ function HeroSection() {
           >
             A Software Developer 👨‍💻
           </ContentH1>
+
+          {showDataAnalyst && (
+            <ContentH1
+              style={{ color: "#D72323" }}
+              className="typewriterAnalyst"
+              onAnimationEnd={() => {
+                setShowDataAnalyst(false);
+                setShowDataEngineer(true);
+              }}
+            >
+              A Data Governance Analyst 📊
+            </ContentH1>
+          )}
+
+          {showDataEngineer && (
+            <ContentH1
+              style={{ color: "#D72323" }}
+              className="typewriterEngineer"
+              onAnimationEnd={() => {
+                setShowDataEngineer(false);
+                setShowMLEngineer(true);
+              }}
+            >
+              A Data Engineer 🧑‍🔬
+            </ContentH1>
+          )}
+
+          {showMLEngineer && (
+            <ContentH1
+              style={{ color: "#D72323" }}
+              className="typewriterMLEngineer"
+              onAnimationEnd={() => {
+                setShowMLEngineer(false);
+                setShowSomethingData(true);
+              }}
+            >
+              A ML Engineer 🤖
+            </ContentH1>
+          )}
+
+          {showSomethingData && (
+            <ContentH1
+              style={{ color: "#D72323" }}
+              className="typewriterSomethingData"
+            >
+              Something in Data 🤯
+            </ContentH1>
+          )}
         </Text>
         <ContentSvg
           style={{ color: "#F5EDED" }}
@@ -115,7 +185,7 @@ function HeroSection() {
           transition={{ duration: 3.5 }}
         >
           <svg
-            width="885"
+            width="850"
             height="629"
             viewBox="0 0 885 629"
             fill="none"

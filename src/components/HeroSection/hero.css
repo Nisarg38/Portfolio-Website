@@ -23,3 +23,95 @@
     transform: skewX(0deg);
   }
 }
+
+/* hero.css */
+@keyframes strikethrough {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+.strikethrough {
+  position: relative;
+  display: inline-flex; /* Change to inline-flex */
+}
+
+.strikethrough::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0; /* Ensure it doesn't overshoot */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  animation: strikethrough 1s forwards;
+}
+
+/* hero.css */
+@keyframes typewriterAnalyst {
+  0% { width: 0; }
+  50% { width: 70%; }
+  100% { width: 90%; }
+}
+
+@keyframes typewriterEngineer {
+  0% { width: 0; }
+  50% { width: 0; }
+  100% { width: 70%; }
+}
+
+.typewriterAnalyst {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  white-space: nowrap;
+  animation: typewriterAnalyst 2s steps(14, end) forwards 1s;
+}
+
+.typewriterEngineer {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  white-space: nowrap;
+  animation: typewriterEngineer 4s steps(14, end) forwards 1s; /* Starts after 2 seconds */
+}
+
+
+/* hero.css */
+@keyframes typewriterMLEngineer {
+  0% { width: 0; }
+  50% { width: 0; }
+  100% { width: 70%; }
+}
+
+.typewriterMLEngineer {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  white-space: nowrap;
+  animation: typewriterMLEngineer 4s steps(12, end) forwards; /* Starts after 2 seconds */
+}
+
+
+/* hero.css */
+@keyframes typewriterSomethingData {
+  0% { width: 0; }
+  50% { width: 0; }
+  100% { width: 70%; }
+}
+
+.typewriterSomethingData {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  white-space: nowrap;
+  animation: typewriterSomethingData 4s steps(17, end) forwards; /* Starts after 2 seconds */
+}
