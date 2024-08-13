@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import profilePic from "./assets/cropped-image.png";
 import linkedinIcon from "./assets/LinkedIn-Logos/LinkedIn-Logos/LI-In-Bug.png";
 import githubIcon from "./assets/github-mark-c791e9551fe4/github-mark/github-mark-white.png";
-import resume from "./assets/resume-example.pdf";
+import resume from "./assets/resume.pdf";
 
 const Profile = () => {
   return (
@@ -21,13 +21,9 @@ const Profile = () => {
             onClick={() => window.open(resume, "_blank")}>
             Download CV
           </button>
-          <button
-            className="btn btn-color-1"
-            onClick={() => (window.location.href = "./#contact")}>
-            <Link to="contact" smooth={true} duration={1000}>
-              Contact Info
-            </Link>
-          </button>
+          <Link to="contact" smooth={true} duration={1000}>
+            <button className="btn btn-color-1">Contact Info</button>
+          </Link>
         </div>
         <div id="socials-container">
           <img

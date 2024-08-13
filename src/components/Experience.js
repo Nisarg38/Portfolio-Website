@@ -12,80 +12,89 @@ const Experience = () => {
       <div className="experience-details-container">
         <div className="about-containers">
           <div className="details-container">
-            <h2 className="experience-sub-title">Frontend Development</h2>
+            <h2 className="experience-sub-title">
+              Data/ML Eng & Cloud Services
+            </h2>
             <div className="article-container">
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>HTML</h3>
+                  <h3>Python</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <IoCheckmarkCircle className="icon" size={"30px"} />
-                <div>
-                  <h3>SASS</h3>
+                  <h3>Databricks</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
+                  <h3>Fine-tuning Models</h3>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
+                  <h3>Azure & AWS Cloud Services</h3>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>Material UI</h3>
+                  <h3>ETL Processes</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <IoCheckmarkCircle className="icon" size={"30px"} />
+                <div>
+                  <h3>Data Pipelines</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
             </div>
           </div>
           <div className="details-container">
-            <h2 className="experience-sub-title">Backend Development</h2>
+            <h2 className="experience-sub-title">Software Dev & Programming</h2>
             <div className="article-container">
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
+                  <h3>JS/TS (Node.js, Angular, React, Next.js)</h3>
+                  <p>Experienced</p>
                 </div>
               </article>
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>Node JS</h3>
+                  <h3>SQL & NoSQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <IoCheckmarkCircle className="icon" size={"30px"} />
+                <div>
+                  <h3>Power BI</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>Express JS</h3>
+                  <h3>Microsoft 365</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
                 <IoCheckmarkCircle className="icon" size={"30px"} />
                 <div>
-                  <h3>Git</h3>
+                  <h3>Jira & Agile/Scrum</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
