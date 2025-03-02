@@ -4,6 +4,7 @@ import Profile from "./components/Profile";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import BlogLink from "./components/BlogLink";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./style.css";

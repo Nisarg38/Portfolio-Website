@@ -1,0 +1,40 @@
+---
+// This is the frontmatter section in Astro
+const { title, description } = Astro.props;
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description || "My Portfolio Blog"} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title || "My Blog"}</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/mediaqueries.css" />
+  </head>
+  <body>
+    <div class="blog-container">
+      <Navbar />
+      <main class="blog-content">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  .blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .blog-content {
+    padding: 2rem 0;
+  }
+</style> 

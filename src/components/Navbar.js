@@ -34,6 +34,11 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <li>
+              <a href={process.env.PUBLIC_URL + "/blog"} className="external-link">
+                Blog
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -83,6 +88,11 @@ const Navbar = () => {
                 onClick={toggleMenu}>
                 Contact
               </Link>
+            </li>
+            <li>
+              <a href={process.env.PUBLIC_URL + "/blog"} onClick={toggleMenu} className="external-link">
+                Blog
+              </a>
             </li>
           </div>
         </div>

@@ -1,0 +1,84 @@
+---
+import BlogLayout from './BlogLayout.astro';
+
+const { frontmatter } = Astro.props;
+const { title, description, pubDate, author, image } = frontmatter;
+
+// Format the date
+const formattedDate = new Date(pubDate).toLocaleDateString('en-us', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BlogLayout title={title} description={description}>
+  <article class="blog-post">
+    <div class="blog-header">
+      <h1>{title}</h1>
+      <div class="blog-meta">
+        <span class="date">{formattedDate}</span>
+        {author && <span class="author">by {author}</span>}
+      </div>
+    </div>
+    
+    {image && (
+      <div class="featured-image">
+        <img src={image} alt={title} />
+      </div>
+    )}
+    
+    <div class="blog-content">
+      <slot />
+    </div>
+  </article>
+</BlogLayout>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .blog-header {
+    margin-bottom: 2rem;
+  }
+  
+  .blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-meta {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .blog-meta .author {
+    margin-left: 1rem;
+  }
+  
+  .featured-image {
+    margin: 2rem 0;
+  }
+  
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .blog-content {
+    line-height: 1.7;
+    font-size: 1.1rem;
+  }
+  
+  .blog-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-content p {
+    margin-bottom: 1.5rem;
+  }
+</style> 
