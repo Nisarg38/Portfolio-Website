@@ -24,6 +24,9 @@ const Profile = () => {
           <Link to="contact" smooth={true} duration={1000}>
             <button className="btn btn-color-1">Contact Info</button>
           </Link>
+          <Link onClick={() => window.open(process.env.PUBLIC_URL + "/blog", "_blank")}>
+            <button className="btn btn-color-1">Blog</button>
+          </Link>
         </div>
         <div id="socials-container">
           <img

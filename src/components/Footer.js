@@ -27,6 +27,11 @@ const Footer = () => {
                 Contact
               </Link>
             </li>
+            <li>
+              <a href={process.env.PUBLIC_URL + "/blog"} className="external-link" target="_blank">
+                Blog
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

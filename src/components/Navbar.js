@@ -35,7 +35,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a href={process.env.PUBLIC_URL + "/blog"} className="external-link">
+              <a href={process.env.PUBLIC_URL + "/blog"} className="external-link" target="_blank">
                 Blog
               </a>
             </li>
