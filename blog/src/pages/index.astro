@@ -77,7 +77,7 @@ const recentPosts = posts.slice(0, 5);
 						{recentPosts.map((post) => (
 							<li class="post-item">
 								<h3 class="post-title">
-									<a href={`/Portfolio-Website/blog/blogs/${post.id}/`}>{post.data.title}</a>
+									<a href={`/Portfolio-Website/blog/blogs/${post.id}`}>{post.data.title}</a>
 								</h3>
 								<div class="post-date">
 									<FormattedDate date={post.data.pubDate} />
@@ -85,7 +85,7 @@ const recentPosts = posts.slice(0, 5);
 								<p>
 									{post.data.description}
 								</p>
-								<a href={`/Portfolio-Website/blog/blogs/${post.id}/`} class="read-more">
+								<a href={`/Portfolio-Website/blog/blogs/${post.id}`} class="read-more">
 									Read more →
 								</a>
 							</li>
