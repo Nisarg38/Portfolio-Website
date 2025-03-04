@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://nisarg38.github.io',
-	base: '/Portfolio-Website/blog',
+	site: 'https://nisarg38.github.io/Portfolio-Website',
+	base: '/blog',
 	integrations: [mdx(), sitemap()],
 	output: 'static',
 	// GitHub Pages deployment needs this

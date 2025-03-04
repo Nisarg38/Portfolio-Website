@@ -1,12 +1,12 @@
 <nav class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <a href="/Portfolio-Website/blog/">My Blog</a>
+      <a href="/blog/">My Blog</a>
     </div>
     <div class="navbar-menu">
-      <a href="/Portfolio-Website/blog/" class="nav-link">Home</a>
-      <a href="/Portfolio-Website/blog/about" class="nav-link">About</a>
-      <a href="/Portfolio-Website/blog/contact" class="nav-link">Contact</a>
+      <a href="/blog/" class="nav-link">Home</a>
+      <a href="/blog/about" class="nav-link">About</a>
+      <a href="/blog/contact" class="nav-link">Contact</a>
     </div>
   </div>
 </nav>
@@ -14,7 +14,7 @@
 <style>
   .navbar {
     padding: 1.5rem 0;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .navbar-container {
@@ -26,7 +26,7 @@
   .navbar-logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: var(--accent);
     text-decoration: none;
   }
   
@@ -36,14 +36,14 @@
   }
   
   .nav-link {
-    color: #555;
+    color: rgb(var(--text));
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
   }
   
   .nav-link:hover {
-    color: #0077cc;
+    color: var(--accent);
   }
   
   @media (max-width: 768px) {

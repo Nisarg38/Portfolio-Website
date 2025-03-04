@@ -2,7 +2,7 @@
 title: 'First Post'
 description: 'Exploring LLMs, Agentic Frameworks, and Promptix'
 pubDate: 'March 2 2025'
-heroImage: '/first-post.png'
+heroImage: 'https://raw.githubusercontent.com/Nisarg38/Portfolio-Website/refs/heads/master/blog/public/first-post.png'
 ---
 ### Exploring the Evolution of AI: LLMs, Agentic Frameworks, and Automation
 

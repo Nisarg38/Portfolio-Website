@@ -3,17 +3,65 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+// Get and sort blog posts by date
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// Get the 5 most recent posts
+const recentPosts = posts.slice(0, 5);
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.recent-posts {
+				margin-top: 3rem;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				padding-top: 2rem;
+			}
+			.recent-posts h2 {
+				margin-bottom: 1.5rem;
+				font-size: 1.8rem;
+			}
+			.post-list {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			.post-item {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1.5rem;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+			}
+			.post-item:last-child {
+				border-bottom: none;
+			}
+			.post-title {
+				font-size: 1.4rem;
+				margin: 0 0 0.5rem 0;
+			}
+			.post-date {
+				font-size: 0.9rem;
+				color: rgba(var(--text), 0.7);
+				margin-bottom: 0.75rem;
+			}
+			.read-more {
+				display: inline-block;
+				margin-top: 1.5rem;
+				font-weight: bold;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello !</h1>
+			<h1>Hello World 👋!</h1>
             <p>
             Welcome to my personal space where I share thoughts, experiences, and insights on technology,
             creativity, and life. This is a space where I will talk about things I am actively working on and exploring.
@@ -21,6 +69,32 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             <p>
             Enjoy the read, and feel free to connect!
             </p>
+			
+			<section class="recent-posts">
+				<h2>Recent Blog Posts</h2>
+				{recentPosts.length > 0 ? (
+					<ul class="post-list">
+						{recentPosts.map((post) => (
+							<li class="post-item">
+								<h3 class="post-title">
+									<a href={`/blog/blogs/${post.id}/`}>{post.data.title}</a>
+								</h3>
+								<div class="post-date">
+									<FormattedDate date={post.data.pubDate} />
+								</div>
+								<p>
+									{post.data.description}
+								</p>
+								<a href={`/blog/blogs/${post.id}/`} class="read-more">
+									Read more →
+								</a>
+							</li>
+						))}
+					</ul>
+				) : (
+					<p>No posts yet. Check back soon!</p>
+				)}
+			</section>
 		</main>
 		<Footer />
 	</body>
